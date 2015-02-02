@@ -19,53 +19,27 @@ var argv = require('minimist')(process.argv.slice(2));
 
 
 if (argv['v'] || argv['version']) {
-  util.log(pkg.version);
+  console.log(pkg.version);
   process.exit();
 }
 
-if (argv['h'] || argv['help']) {
+if (argv['h'] || argv['help'] || process.argv.length === 2) {
 
-  util.log('')
-  util.log('a source code manager')
-  util.log('')
+  console.log('')
+  console.log('前端服务过滤器')
+  console.log('')
 
-  util.log('Usage:')
-  util.log('')
-  util.log('    cm -h|--help      #show help info')
-  util.log('    cm -v|--version              #show version')
-  util.log('    cm init                      #init cmconfig with a simple example')
-  util.log('    cm list                      #show all tasks')
-  util.log('    cm <taskName> [args]         #run task named taskName')
-  util.log('')
-
-  util.log('Examples:')
-  util.log('')
-  util.log('    $ cd project                 # change dir')
-  util.log('    $ cm init                    # init')
-  util.log('    $ cm simple -t hi world      # run task simple and use args')
-  util.log('')
-
-  util.log('Note: taskName can not be init or list.')
+  console.log('Usage:')
+  console.log('')
+  console.log('    qf -h|--help      #show help info')
+  console.log('    qf -v|--version   #show version')
+  console.log('    qf -s|--server    #start server')
+  console.log('')
 
   process.exit();
 
 }
 
-require(execfile);
-
-//var exec = spawn('node', ['--harmony', execfile]);
-
-// exec.stdout.on('data', function (data) {
-//   util.info(chalk.blue(data.toString()));
-// });
-
-// exec.stderr.on('data', function (data) {
-//   util.info(chalk.red(data.toString()));
-// });
-
-// exec.on('close', function (code) {
-//   util.info('qfilter close');
-//   util.info(code.toString());
-// });
-
-
+if (argv['s']) {
+  require(execfile);
+}

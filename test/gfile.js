@@ -1,5 +1,15 @@
 var qfilter = require('qfilter');
 
+
+
+qfilter.add({
+  name:'q_less',
+  //path:'',
+  config:{
+
+  }
+})
+
 qfilter.add({
   name:'q_static',
   //path:'',
