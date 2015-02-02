@@ -17,7 +17,6 @@ var util = require('../lib/util');
 
 var argv = require('minimist')(process.argv.slice(2));
 
-
 if (argv['v'] || argv['version']) {
   console.log(pkg.version);
   process.exit();
@@ -33,13 +32,13 @@ if (argv['h'] || argv['help'] || process.argv.length === 2) {
   console.log('')
   console.log('    qf -h|--help      #show help info')
   console.log('    qf -v|--version   #show version')
-  console.log('    qf -s|--server    #start server')
+  console.log('    qf s              #start server')
   console.log('')
 
   process.exit();
 
 }
 
-if (argv['s']) {
+if (argv['_'].indexOf('s') !== -1) {
   require(execfile);
 }
