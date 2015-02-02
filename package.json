@@ -1,0 +1,29 @@
+{
+  "name": "qfilter",
+  "version": "0.0.1",
+  "description": "前端服务过滤器",
+  "scripts": {
+    "start": "node --harmony ./lib/server.js"
+  },
+  "bin": {
+    "qfilter": "bin/qfilter",
+    "qf": "bin/qfilter"
+  },
+  "main": "./lib/index.js",
+  "dependencies": {
+    "chalk": "~0.5.1",
+    "config": "0.4.35",
+    "koa": "0.13.0",
+    "koa-logger": "^1.2.2",
+    "koa-route": "2.2.0",
+    "koa-send": "^1.3.1",
+    "koa-static": "1.4.5",
+    "lodash": "2.4.1",
+    "minimist": "~1.1.0",
+    "mockjs": "0.1.4",
+    "request": "2.51.0",
+    "thunkify": "2.1.2",
+    "velocityjs": "0.3.x"
+  },
+  "devDependencies": {}
+}

@@ -1,0 +1,71 @@
+#!/usr/bin/env node --harmony
+
+"use strict";
+
+
+var path = require('path');
+var cp = require('child_process');
+var spawn = cp.spawn;
+var chalk = require('chalk');
+
+var pkg = require('../package.json');
+var fs = require('fs');
+var execfile = path.join(process.cwd(), '/gfile.js');
+
+var util = require('../lib/util');
+
+
+var argv = require('minimist')(process.argv.slice(2));
+
+
+if (argv['v'] || argv['version']) {
+  util.log(pkg.version);
+  process.exit();
+}
+
+if (argv['h'] || argv['help']) {
+
+  util.log('')
+  util.log('a source code manager')
+  util.log('')
+
+  util.log('Usage:')
+  util.log('')
+  util.log('    cm -h|--help      #show help info')
+  util.log('    cm -v|--version              #show version')
+  util.log('    cm init                      #init cmconfig with a simple example')
+  util.log('    cm list                      #show all tasks')
+  util.log('    cm <taskName> [args]         #run task named taskName')
+  util.log('')
+
+  util.log('Examples:')
+  util.log('')
+  util.log('    $ cd project                 # change dir')
+  util.log('    $ cm init                    # init')
+  util.log('    $ cm simple -t hi world      # run task simple and use args')
+  util.log('')
+
+  util.log('Note: taskName can not be init or list.')
+
+  process.exit();
+
+}
+
+require(execfile);
+
+//var exec = spawn('node', ['--harmony', execfile]);
+
+// exec.stdout.on('data', function (data) {
+//   util.info(chalk.blue(data.toString()));
+// });
+
+// exec.stderr.on('data', function (data) {
+//   util.info(chalk.red(data.toString()));
+// });
+
+// exec.on('close', function (code) {
+//   util.info('qfilter close');
+//   util.info(code.toString());
+// });
+
+

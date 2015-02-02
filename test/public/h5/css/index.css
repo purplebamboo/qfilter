@@ -1,0 +1,342 @@
+*{margin:0;padding:0}
+table{border-collapse:collapse;border-spacing:0}
+h1,h2,h3,h4,h5,h6{font-size:100%}
+ul,ol,li{list-style:none}
+em,i{font-style:normal}
+img{border:0}
+input,img{vertical-align:middle}
+body{color:#000;font-family:arial;background:#FFF}
+.clearfix:after{display:block;content:'';clear:both;visibility:hidden}
+.none{display:none}
+.no-spacing{margin:0;padding:0}
+.margin-center{margin:0 auto;text-align:center}
+
+body {
+background-color: #fff !important;
+font: 12px/1.5;
+}
+body, button, input, select, textarea {
+font-family: 'helvetica neue',tahoma,'hiragino sans gb',stheiti,'wenquanyi micro hei',\5FAE\8F6F\96C5\9ED1,\5B8B\4F53,sans-serif;
+}
+
+a {
+text-decoration: none;
+-webkit-touch-callout:none;
+-webkit-user-select:none;
+-khtml-user-select:none;
+-moz-user-select:none;
+-ms-user-select:none;
+user-select:none;
+-webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+
+
+.header {
+position: relative;
+}
+.top-search{
+width: 100%;
+height: 38px;
+padding-top: 7px;
+background-color: #fafaf7;
+border-bottom: 1px solid #fff;
+
+}
+.top-search .search-wrap{
+width: 300px;
+height: 31px;
+border-radius: 9px;
+background-color: #fff;
+margin: 0 auto;
+position: relative;
+text-align: center;
+}
+.search-input-wrap{
+  position: relative;
+  width: 170px;
+  margin: 0 auto;
+}
+
+.inp-search{
+color: #999;
+font-size: 12px;
+width: 100%;
+height: 30px;
+border: none;
+padding-right: 0px;
+padding-left: 30px;
+outline: none;
+}
+.bton-search{
+position: absolute;
+left: 0px;
+top: 0px;
+width: 30px;
+height: 30px;
+border: none;
+-webkit-appearance: none;
+background-image: url(http://img04.taobaocdn.com/tps/i4/T16SRNFotfXXX1dP6j-60-60.png);
+background-size: 30px 30px;
+}
+.c-form-suggest {
+height: 32px;
+position: relative;
+}
+.suggest {
+color: #666;
+font-size: 16px;
+width: 300px;
+position: absolute;
+z-index: 5;
+clear: both;
+overflow: hidden;
+text-align: center;
+background: #EEE;
+padding-bottom: 10px;
+display: none;
+}
+
+.suggest .meat {
+background: 0;
+padding-top: 10px;
+padding-bottom: 26px;
+-webkit-tap-highlight-color: rgba(255,255,255,0);
+-webkit-border-radius: 2px;
+border-radius: 2px;
+text-align: left;
+}
+.suggest .meat li {
+height: 40px;
+line-height: 40px;
+text-indent: 10px;
+border-bottom: solid 1px #DDD;
+white-space: nowrap;
+text-overflow: ellipsis;
+overflow: hidden;
+position: relative;
+}
+.suggest .meat li div.addition {
+position: absolute;
+right: 0;
+top: 7px;
+border-left: solid 1px #D7D7D7;
+width: 39px;
+height: 26px;
+background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAA9SURBVHjaYpw5cyYDDvAfic2ITQETAwVgJGpmAeLfUBof+D/4/MwKTQTo+CNaIsHAIzWecYE/UIwTAAQYAMUgB+SOBTVxAAAAAElFTkSuQmCC);
+background-repeat: no-repeat;
+background-position: center center;
+}
+
+.banner{
+margin: 0 auto;
+}
+.content{
+width: 100%;
+}
+.content .slide-wrap{
+margin: 0 auto;
+padding: 0 0px;
+background: #fff;
+padding-top: 45px;
+position: relative;
+}
+.content .slide-wrap-notab{
+  padding-top: 0px;
+}
+.content .slide-wrap-area{
+  background-color: transparent;
+  padding-top: 0px;
+}
+
+.tab-wrap{
+border-bottom: 1px solid #dedede;
+position: absolute;
+overflow: hidden;
+height: 45px;
+top: 0px;
+width: 100%;
+background: #fafaf7;
+/*background: #fafaf7 url('http://gtms01.alicdn.com/tps/i1/TB1TS58GFXXXXcgXpXXbuf3FpXX-22-15.png') right top repeat-y;*/
+
+}
+.tab-wrap-fixed{
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 45px;
+  width: 100%;
+  z-index: 999;
+}
+.tab-wrap .cover{
+  width: 18px;
+  height: 45px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  display: inline-block;
+  background: #fff url('http://gtms01.alicdn.com/tps/i1/TB1TS58GFXXXXcgXpXXbuf3FpXX-22-15.png') -6px top repeat-y;
+}
+.tab-nav{
+padding: 0 8px;
+height: 45px;
+overflow: hidden;
+visibility: hidden;
+}
+.tab-nav li{
+float: left;
+width: 25%;
+height: 42px;
+text-align: center;
+border-bottom: 3px solid none;
+}
+.tab-nav li.selected{
+border-bottom: 3px solid #ff6500;
+}
+.tab-nav li a{
+display: block;
+line-height: 45px;
+color: #666;
+}
+.tab-nav li.selected a{
+color: #ff6500;
+}
+
+.tab-content{
+position: relative;
+}
+.list-a{
+padding: 0 8px;
+}
+.list-a li a{
+display: block;
+padding: 10px 0;
+position: relative;
+color: #999;
+padding-left: 135px;
+height: 120px;
+border-bottom: 1px solid #f8f6f7;
+}
+
+.list-a li a img{
+position: absolute;
+left: 0px;
+top: 10px;
+border: 1px solid #dedede;
+}
+.list-a li a .title{
+display: block;
+color: #333;
+font-size: 14px;
+line-height: 17px;
+height: 34px;
+overflow: hidden;
+padding-top: 17px;
+}
+.list-a li a .discount{
+display: block;
+height: 34px;
+line-height: 34px;
+font-size: 16px;
+font-weight: 700;
+color: #ff6500;
+}
+.list-a li a .discount .discount-info{
+background: url(http://gtms02.alicdn.com/tps/i2/TB1joOwFVXXXXbgXXXXqe3LFVXX-152-38.png);
+background-size: 76px 20px;
+padding: 3px;
+color: #fff;
+font-size: 12px;
+font-weight: normal;
+padding-right: 12px;
+}
+.list-a li a .discount em{
+font-size: 11px;
+vertical-align: bottom;
+}
+
+
+.list-a li a .price{
+display: block;
+font-size: 12px;
+text-decoration:line-through;
+}
+
+.list-b{
+padding: 10px 8px 0px 0px;
+}
+.list-b li{
+float: left;
+width: 50%;
+height: auto;
+
+margin-bottom: 10px;
+}
+
+.list-b li a{
+display: block;
+position: relative;
+color: #999;
+padding-left: 8px;
+border: 1px solid #f8f6f7;
+margin-left: 8px;
+padding-bottom: 8px;
+overflow: hidden;
+}
+.list-b li img{
+margin-left: -8px;
+margin-bottom: 8px;
+}
+.list-b li .title{
+font-size: 14px;
+color: #333;
+height: 20px;
+line-height: 20px;
+overflow: hidden;
+display: block;
+}
+.list-b li a .discount{
+display: block;
+height: 22px;
+font-size: 16px;
+font-weight: 700;
+color: #ff6500;
+}
+.list-b li a .discount .discount-info{
+margin-right: 0px;
+color: #ff6500;
+font-size: 12px;
+font-weight: normal;
+padding: 0;
+vertical-align: 1px;
+}
+.list-b li a .discount em{
+font-size: 11px;
+}
+.list-b li a .price{
+display: block;
+font-size: 12px;
+text-decoration:line-through;
+}
+
+.list-a li,.list-b li{
+	position: relative;
+}
+.hidden{
+display: none;
+}
+.vt-bottom{
+vertical-align: bottom;
+}
+
+.sold-out{
+background: url("http://gtms02.alicdn.com/tps/i2/TB1msTgFVXXXXacXpXXrywt4VXX-120-120.png");
+background-size: 60px 60px;
+position: absolute;
+left: 0px;
+top: 0px;
+display: inline-block;
+width: 60px;
+height: 60px;
+text-indent: -999px;
+
+}
