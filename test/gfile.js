@@ -14,7 +14,7 @@ qfilter.add({
   name:'q_static',
   //path:'',
   config:{
-
+    root:'./public'
   }
 })
 
