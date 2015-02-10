@@ -1,0 +1,16 @@
+<div class="msg" id="J_msg">
+
+
+我是通过parse包含进来的 <br>
+
+下面是一个简单的循环
+
+<ul>
+  #foreach ($people in $list)
+  <li>name:${people.name}  ------  sex:${people.sex}</li>
+  #end
+
+</ul>
+
+
+</div>

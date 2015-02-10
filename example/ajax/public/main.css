@@ -1,0 +1,17 @@
+.tip{
+  width: 400px;
+  height: 200px;
+  border-radius: 5px;
+  margin: 155px auto;
+  color: #666;
+  font-size: 15px;
+}
+
+.msg{
+  background: #fafafa;
+  color: #333;
+  font-size: 19px;
+  min-height: 150px;
+  padding: 10px;
+  margin-top: 10px;
+}

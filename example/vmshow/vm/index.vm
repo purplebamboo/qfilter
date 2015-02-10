@@ -1,0 +1,21 @@
+#set($layout = "layout/default_layout.vm")
+
+<div class="tip">
+
+<h1>$title</h1>
+
+这是一个vm渲染的例子。
+q_vm是支持渲染vm模板的中间件。
+
+<h3>这个资料值:$money,使用helper方法渲染变成  '$Helper.money($money)'</h3>
+
+
+<h3>支持全局的宏定义：#test($money) </h3>
+
+<br>
+#parse('msg.vm')
+
+
+</div>
+
+
