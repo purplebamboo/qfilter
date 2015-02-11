@@ -18,19 +18,19 @@ qfilter是一个基于koa开发的中间件服务。用来解决一系列的开�
 
 ## Getting started
 
-### install globally
+### 1.install globally
 
 ```
 sudo npm install -g qfilter
 ```
 
-### install in project devDependencies
+### 2.install in project devDependencies
 
 ```
 npm install --save-dev qfilter
 ```
 
-### config
+### 3.config
 
 在项目根目录下新建gfile.js文件。
 在gfile.js里面配置各种中间件，可以参考example里面的。
@@ -71,7 +71,7 @@ qfilter.run开始运行中间件。
 以q_开头的都是官方中间件，具体见下面自定义中间件部分。
 
 
-### run
+### 4.run
 
 在项目根目录下，运行
 
