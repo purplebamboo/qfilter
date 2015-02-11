@@ -18,10 +18,16 @@ qfilter是一个基于koa开发的中间件服务。用来解决一系列的开�
 
 ## Getting started
 
-### install
+### install globally
 
 ```
 sudo npm install -g qfilter
+```
+
+### install in project devDependencies
+
+```
+npm install --save-dev qfilter
 ```
 
 ### config
@@ -39,6 +45,7 @@ var qfilter = require('qfilter');
  * config.root  静态资源根目录，默认是当前根目录。
  * config.skip  需要跳过处理的后缀，默认是 'vm|do|json'。以|分割。
  * config.combo 是否支持静态资源的comboo,默认是true。
+ * config.comboType 支持comboo的静态资源类型,默认是'js|css|less'，以|分割。
  * config.prfix comboo的前缀 默认是 '??'。
  */
 //添加中间件
@@ -110,6 +117,7 @@ qf s
 * config.root  静态资源根目录，默认是当前根目录。
 * config.skip  需要跳过处理的后缀，默认是 'vm|do|json'。多个以|分割。
 * config.combo 是否支持静态资源的comboo,默认是true。
+* config.comboType 支持comboo的静态资源类型,默认是'js|css|less'，以|分割。
 * config.prfix comboo的前缀 默认是 '??'。
 
 
