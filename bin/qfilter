@@ -10,7 +10,7 @@ var chalk = require('chalk');
 
 var pkg = require('../package.json');
 var fs = require('fs');
-var execfile = path.join(process.cwd(), '/gfile.js');
+var execfile = path.join(process.cwd(), 'gfile.js');
 
 var util = require('../lib/util');
 
@@ -32,6 +32,7 @@ if (argv['h'] || argv['help'] || process.argv.length === 2) {
   console.log('')
   console.log('    qf -h|--help      #show help info')
   console.log('    qf -v|--version   #show version')
+  console.log('    qf g              #generate a gfile.js')
   console.log('    qf s              #start server')
   console.log('')
 
@@ -39,6 +40,22 @@ if (argv['h'] || argv['help'] || process.argv.length === 2) {
 
 }
 
+if (argv['_'].indexOf('g') !== -1) {
+  var ws = fs.createWriteStream(path.join(process.cwd(), 'gfile.js'));
+  var rs = fs.createReadStream(path.join(__dirname , '../test','_gfile.js'));
+  rs.pipe(ws);
+
+  rs.on('end',function (){
+    util.log('gfile.js生成完毕。');
+  })
+}
+
+
 if (argv['_'].indexOf('s') !== -1) {
+  if (!fs.existsSync(execfile)) {
+    util.error('当前目录下没有gfile.js，请检查。可以使用qf g生成一个。')
+    process.exit();
+  }
+
   require(execfile);
 }
