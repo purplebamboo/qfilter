@@ -1,6 +1,6 @@
 {
   "name": "qfilter",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "前端服务过滤器",
   "scripts": {
     "start": "node --harmony ./lib/server.js"
