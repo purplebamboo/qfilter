@@ -162,7 +162,7 @@ config.map  [array] 映射配置。是个数组，每个值是个配置项，支
 * config.viewLocation  vm模板的目录，默认是当前根目录。
 * config.dataLocation  vm模板对应的渲染变量文件的目录，默认是当前根目录。
 * config.macros        全局的宏定义。在vm中使用  #xxx()  来使用。
-* config.dataInject    用于对返回的变量进行统一处理。这样可以注入一些全局统一的变量或者方法，支持返回promise对象处理异步。
+* config.dataInject    用于对返回的变量进行统一处理。这样可以注入一些全局统一的变量或者方法，支持返回promise对象处理异步。return的值如果不为空，就会整个替换（同理promise的情况下，就是resolve的值不为空）。
 
 
 ## 自定义中间件
