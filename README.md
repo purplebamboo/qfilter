@@ -32,7 +32,8 @@ npm install --save-dev qfilter
 
 ### 3.config
 
-在项目根目录下新建gfile.js文件。
+在项目根目录下新建gfile.js文件。（可以使用 `qf g`生成一个最简单的）
+
 在gfile.js里面配置各种中间件，可以参考example里面的。
 
 最简单的例子:
