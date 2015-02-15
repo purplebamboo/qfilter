@@ -46,10 +46,8 @@ qfilter.add({
  * config.viewLocation  vm模板的目录，默认是当前根目录。
  * config.dataLocation  vm模板对应的渲染变量文件的目录，默认是当前根目录。
  * config.macros        全局的宏定义。在vm中使用  #xxx()  来使用。
- * config.dataInject    用于对返回的变量进行统一处理。这样可以注入一些全局统一的变量或者方法。
+ * config.dataInject    用于对返回的变量进行统一处理。这样可以注入一些全局统一的变量或者方法，支持返回promise对象处理异步。
  */
-
-
 
 qfilter.add({
   name: 'q_vm',
@@ -63,12 +61,24 @@ qfilter.add({
       }
     },
     //用于对返回的context进行统一处理
+    //参数为dataLocation返回的对应数据
+    //此外支持返回一个promise对象。用来处理异步。
     dataInject: function(data) {
+
       data.Helper = {
         money: function(num){
           return num + '￥';
         }
       }
+      //es6原生支持promise
+      return new Promise(function(resolve, reject) {
+        setTimeout(function(){
+            data.asyncdata = "我是异步获取的数据";
+            resolve();
+            //可以resolve一个新的值作为最终的data
+            //resolve({asyncdata:'我是异步数据，但是被强制修改了'});
+        },100)
+      });
     }
   }
 })

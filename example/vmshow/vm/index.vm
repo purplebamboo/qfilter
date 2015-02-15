@@ -1,4 +1,5 @@
 #set($layout = "layout/default_layout.vm")
+<!--设置layout-->
 
 <div class="tip">
 
@@ -8,7 +9,7 @@
 q_vm是支持渲染vm模板的中间件。
 
 <h3>这个资料值:$money,使用helper方法渲染变成  '$Helper.money($money)'</h3>
-
+<h3>这是在dataInject里面插入的异步数据:'$asyncdata'</h3>
 
 <h3>支持全局的宏定义：#test($money) </h3>
 
