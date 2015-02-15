@@ -7,6 +7,7 @@ var path = require('path');
 var cp = require('child_process');
 var spawn = cp.spawn;
 var chalk = require('chalk');
+var nodemon = require('nodemon');
 
 var pkg = require('../package.json');
 var fs = require('fs');
@@ -57,5 +58,25 @@ if (argv['_'].indexOf('s') !== -1) {
     process.exit();
   }
 
-  require(execfile);
+  nodemon({
+    script: execfile,
+    ext: 'js',
+    ignore: ['node_modules/*'],
+    nodeArgs: ['--harmony']
+  });
+
+  nodemon.on('start', function () {
+    console.log('app has started');
+  }).on('restart', function (files) {
+    console.log('app restarted due to: ', files);
+  });
+
 }
+
+
+
+
+
+
+
+
