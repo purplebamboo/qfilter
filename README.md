@@ -1,4 +1,4 @@
-# 前端服务过滤器
+# 前端服务过滤器[![Build Status](https://travis-ci.org/purplebamboo/qfilter.svg?branch=master)](https://travis-ci.org/purplebamboo/qfilter)
 
 
 qfilter是一个基于koa开发的中间件服务。用来解决一系列的开发，调试问题。
