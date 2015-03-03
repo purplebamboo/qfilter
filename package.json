@@ -1,6 +1,6 @@
 {
   "name": "qfilter",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "前端服务过滤器",
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha --harmony ./test/test.js"
