@@ -18,6 +18,9 @@ qfilter是一个基于koa开发的中间件服务。用来解决一系列的开�
 
 ## Getting started
 
+请确保node版本号支持harmony特性generator(node 0.11以上)。
+
+
 ### 1.install globally
 
 ```
